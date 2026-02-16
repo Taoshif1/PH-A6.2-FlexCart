@@ -1,4 +1,4 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT (SwiftCart E-Commerce)
+## WELCOME TO FlexCart E-Commerce
 
 
 ## Repository: Create your own public repository and submit the link.

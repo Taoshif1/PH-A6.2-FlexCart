@@ -7,20 +7,23 @@
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
   </head>
 
   <body class="bg-gray-50">
-    
     <!-- Navbar -->
     <nav class="bg-white shadow-md">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between"
+      >
         <!-- Logo -->
-        <h1 class="text-2xl font-bold text-indigo-600">FlexCart</h1>
+        <h1
+          class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-sm text-4xl font-bold"
+        >
+          FlexCart
+        </h1>
 
         <!-- Menu -->
-        <ul class="hidden md:flex space-x-6 font-medium">
+        <ul class="text-gray-600 text-xl hidden md:flex space-x-6 font-medium">
           <li><a href="#" class="hover:text-indigo-600">Home</a></li>
           <li><a href="#" class="hover:text-indigo-600">Products</a></li>
           <li><a href="#" class="hover:text-indigo-600">About</a></li>
@@ -32,7 +35,8 @@
           <button class="text-xl">🛒</button>
           <span
             id="cartCount"
-            class="absolute -top-2 -right-3 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">
+            class="absolute -top-2 -right-3 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full"
+          >
             0
           </span>
         </div>
@@ -40,61 +44,111 @@
     </nav>
 
     <!-- Hero Section -->
-    <section 
-        class="bg-cover bg-center h-[80vh] flex items-center justify-center text-white"
-        style="
-            background-image: url(&quot;https://images.unsplash.com/photo-1512436991641-6745cdb1723f&quot;);">
+    <section
+      class="relative h-[80vh] flex items-center justify-center overflow-hidden"
+      style="
+        background-image: url(&quot;https://images.unsplash.com/photo-1512436991641-6745cdb1723f&quot;);
+      "
+    >
+      <!-- Gradient Overlay: This darkens the image and adds a subtle tint -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-indigo-900/40"
+      ></div>
 
-      <div class="text-center bg-black bg-opacity-50 p-8 rounded-lg">
+      <!-- Hero Content -->
+      <div
+        class="relative z-10 text-center bg-black/30 backdrop-blur-lg p-12 rounded-[2rem] border border-white/10 shadow-2xl mx-4"
+      >
+        <h2
+          class="text-5xl md:text-7xl font-black mb-6 tracking-tighter text-white"
+        >
+          Shop
+          <span
+            class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+          >
+            Beyond
+          </span>
+          Limits
+        </h2>
 
-        <h2 class="text-4xl md:text-6xl font-bold mb-4">Shop Beyond Limits</h2>
-        <p class="mb-6 text-lg md:text-xl">
+        <p
+          class="mb-10 text-lg md:text-2xl text-gray-200 max-w-lg mx-auto font-light leading-relaxed"
+        >
           Discover the best products curated just for you.
         </p>
-        <button
-          class="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg font-semibold">
-          Shop Now
-        </button>
 
+        <!-- Stylish Gradient Button -->
+        <button
+          class="relative group overflow-hidden bg-white text-indigo-950 px-12 py-4 rounded-full font-bold transition-all transform hover:scale-105 active:scale-95 shadow-2xl"
+        >
+          <span class="relative z-10">Shop Now</span>
+          <!-- Hover effect layer -->
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-indigo-300 to-white opacity-0 group-hover:opacity-100 hover:text-white transition-opacity"
+          ></div>
+        </button>
       </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-white">
-
+    <section class="py-20 bg-slate-50">
       <div class="max-w-6xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-12">Why Choose <span class="text-indigo-600">FlexCart?</span></h2>
+        <h2 class="text-5xl font-extrabold tracking-tight mb-16">
+          Why Choose
+          <span
+            class="bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+          >
+            FlexCart?
+          </span>
+        </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="p-6 shadow rounded-lg">
-            <h1 class="text-4xl mb-4">🚚</h1>
-            <h3 class="font-semibold text-xl mb-2">Fast Delivery</h3>
-            <p class="text-gray-600">
+          <!-- Card 1 -->
+          <div
+            class="group p-8 bg-white border border-slate-200 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto group-hover:rotate-12 transition-transform"
+            >
+              🚚
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Fast Delivery</h3>
+            <p class="text-gray-500 leading-relaxed">
               Quick and reliable shipping at your doorstep.
             </p>
           </div>
 
-          <div class="p-6 shadow rounded-lg">
-            <h1 class="text-4xl mb-4">🔒</h1>
-            <h3 class="font-semibold text-xl mb-2">Secure Payment</h3>
-            <p class="text-gray-600">
+          <!-- Card 2 -->
+          <div
+            class="group p-8 bg-white border border-slate-200 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto group-hover:rotate-12 transition-transform"
+            >
+              🔒
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Secure Payment</h3>
+            <p class="text-gray-500 leading-relaxed">
               100% secure transactions and data protection.
             </p>
           </div>
 
-          <div class="p-6 shadow rounded-lg">
-            <h1 class="text-4xl mb-4">📞</h1>
-            <h3 class="font-semibold text-xl mb-2">24/7 Support</h3>
-            <p class="text-gray-600">
+          <!-- Card 3 -->
+          <div
+            class="group p-8 bg-white border border-slate-200 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-pink-50 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto group-hover:rotate-12 transition-transform"
+            >
+              📞
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">24/7 Support</h3>
+            <p class="text-gray-500 leading-relaxed">
               Customer support anytime you need assistance.
             </p>
           </div>
-
         </div>
       </div>
-
     </section>
-
   </body>
-
 </html>
