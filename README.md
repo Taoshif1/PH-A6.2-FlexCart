@@ -1,7 +1,4 @@
-## WELCOME TO FlexCart E-Commerce
-
-
-## Repository: Create your own public repository and submit the link.
+# WELCOME TO FlexCart E-Commerce
 
 ---
 ## 🛍️ API Endpoints
