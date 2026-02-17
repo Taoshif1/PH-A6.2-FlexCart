@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <title>FlexCart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="data:,">
-
+    <link rel="icon" href="data:," />
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,7 +12,7 @@
 
   <body class="bg-gray-50">
     <!-- Navbar -->
-    <nav class="bg-white shadow-md">
+    <nav class="bg-white shadow-md sticky top-0 z-50 backdrop-blur-sm bg-opacity-90">
       <div
         class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between"
       >
@@ -27,7 +26,11 @@
         <!-- Menu -->
         <ul class="text-gray-600 text-xl hidden md:flex space-x-6 font-medium">
           <li><a href="#" class="hover:text-indigo-600">Home</a></li>
-          <li><a href="#categoryContainer" class="hover:text-indigo-600">Products</a></li>
+          <li>
+            <a href="#categoryContainer" class="hover:text-indigo-600"
+              >Products</a
+            >
+          </li>
           <li><a href="#about" class="hover:text-indigo-600">About</a></li>
           <li><a href="#footer" class="hover:text-indigo-600">Contact</a></li>
         </ul>
@@ -93,7 +96,8 @@
     </section>
 
     <!-- Features/Why Choose FlexCart Section -->
-    <section id="about"
+    <section
+      id="about"
       class="py-24 relative overflow-hidden bg-gradient-to-br from-slate-50 via-indigo-50 to-pink-50"
     >
       <!-- Animated Background Glows -->
@@ -227,7 +231,14 @@
       <div class="max-w-7xl mx-auto px-4">
         <!-- Section Title -->
         <div class="text-center mb-12">
-          <h2 class="text-5xl font-black text-slate-900">Explore <span class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-sm">Trending</span> Products</h2>
+          <h2 class="text-5xl font-black text-slate-900">
+            Explore
+            <span
+              class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-sm"
+              >Trending</span
+            >
+            Products
+          </h2>
         </div>
 
         <!-- Categories -->
@@ -236,7 +247,6 @@
           class="flex flex-wrap justify-center gap-4 mb-12"
         >
           <!-- Dynamic category buttons -->
-
         </div>
 
         <!-- Loader -->
@@ -252,10 +262,43 @@
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           <!-- Dynamic product cards -->
-
         </div>
       </div>
     </section>
+
+    <!-- Product Details Modal -->
+    <div
+      id="detailsModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+    >
+      <div
+        class="bg-white rounded-2xl shadow-lg w-[90%] max-w-2xl p-6 relative"
+      >
+        <!-- Close Button -->
+        <button
+          id="closeModal"
+          class="absolute top-3 right-3 text-gray-500 hover:text-black text-xl"
+        >
+          ✖
+        </button>
+
+        <!-- Modal Content -->
+        <div id="modalContent" class="flex flex-col md:flex-row gap-6">
+          <img id="modalImage" class="h-60 object-contain" />
+
+          <div class="flex flex-col">
+            <h2 id="modalTitle" class="text-2xl font-bold mb-2"></h2>
+            <span
+              id="modalCategory"
+              class="text-sm bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full w-fit mb-2"
+            ></span>
+            <p id="modalPrice" class="text-xl font-semibold mb-2"></p>
+            <p id="modalRating" class="text-yellow-500 mb-2"></p>
+            <p id="modalDescription" class="text-gray-600 text-sm"></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Newsletter Section -->
     <section class="py-20 bg-white">
@@ -276,11 +319,15 @@
               <h2
                 class="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight"
               >
-                Join the <br> <span class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-sm ">Flex Squad</span>
+                Join the <br />
+                <span
+                  class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-sm"
+                  >Flex Squad</span
+                >
               </h2>
               <p class="text-indigo-100 text-lg">
-                Subscribe to get early access to new drops & exclusive
-                member only discounts.
+                Subscribe to get early access to new drops & exclusive member
+                only discounts.
               </p>
             </div>
 

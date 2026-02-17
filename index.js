@@ -6,8 +6,45 @@ const productContainer = document.getElementById("productContainer");
 const categoryContainer = document.getElementById("categoryContainer");
 const loader = document.getElementById("loader");
 const cartCount = document.getElementById("cartCount");
+const detailsModal = document.getElementById("detailsModal");
+const closeModal = document.getElementById("closeModal");
+
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalCategory = document.getElementById("modalCategory");
+const modalPrice = document.getElementById("modalPrice");
+const modalRating = document.getElementById("modalRating");
+const modalDescription = document.getElementById("modalDescription");
 
 // challenge parts
+
+// open modal functionality
+const openDetailsModal = (product) => {
+  modalImage.src = product.image;
+  modalTitle.textContent = product.title;
+  modalCategory.textContent = product.category;
+  modalPrice.textContent = `$${product.price}`;
+  modalRating.textContent = `⭐ ${product.rating.rate}`;
+  modalDescription.textContent = product.description;
+
+  detailsModal.classList.remove("hidden");
+  detailsModal.classList.add("flex");
+};
+
+// close modal functionality
+closeModal.addEventListener("click", () => {
+  detailsModal.classList.add("hidden");
+  detailsModal.classList.remove("flex");
+});
+
+//  Close when clicking outside
+detailsModal.addEventListener("click", (e) => {
+  if (e.target === detailsModal) {
+    detailsModal.classList.add("hidden");
+    detailsModal.classList.remove("flex");
+  }
+});
+
 // cart count
 const updateCartCount = () => {
   cartCount.textContent = cart.length;
@@ -159,6 +196,11 @@ const displayProducts = (products) => {
     const addBtn = productCard.querySelector(".add-btn");
     addBtn.addEventListener("click", () => {
       addToCart(product);
+    });
+
+    const detailsBtn = productCard.querySelector(".details-btn");
+    detailsBtn.addEventListener("click", () => {
+      openDetailsModal(product);
     });
 
     productContainer.appendChild(productCard);
