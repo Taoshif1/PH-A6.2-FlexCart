@@ -1,7 +1,8 @@
 # 🛒 FlexCart – Modern E-Commerce Web App
 
-[![Live Site](https://img.shields.io)](https://taoshif1.github.io/PH-A6.2-FlexCart/)
+**Live Site:** [FlexCart](https://taoshif1.github.io/PH-A6.2-FlexCart/)
 **API Used:** [Fake Store API](https://fakestoreapi.com)
+---
 
 ## 🚀 Project Overview
 FlexCart is a fully responsive, dynamic E-Commerce website built using **HTML, CSS & Vanilla JavaScript**. It simulates a real-world online shopping experience by fetching live product data & rendering it dynamically on the UI.
@@ -26,10 +27,10 @@ FlexCart is a fully responsive, dynamic E-Commerce website built using **HTML, C
 ## 🌐 API Endpoints Used
 | Action | Endpoint |
 | :--- | :--- |
-| **Get All Products** | `https://fakestoreapi.comproducts` |
-| **Get All Categories** | `https://fakestoreapi.comproducts/categories` |
-| **Get Products by Category** | `https://fakestoreapi.comproducts/category/${category}` |
-| **Get Single Product** | `https://fakestoreapi.comproducts/${id}` |
+| **Get All Products** | `https://fakestoreapi.com/products` |
+| **Get All Categories** | `https://fakestoreapi.com/products/categories` |
+| **Get Products by Category** | `https://fakestoreapi.com/products/category/${category}` |
+| **Get Single Product** | `https://fakestoreapi.com/products/${id}` |
 
 ---
 
@@ -72,13 +73,14 @@ The layout is fully mobile-responsive using Tailwind CSS utilities:
 ---
 
 ## 📌 Rules Followed
-- ✅ Minimum 5 meaningful commits
+- ✅ Meaningful commits
 - ✅ No dummy text
 - ✅ Real API integration
 - ✅ Fully dynamic content
 
 ---
 
+### 📚 Question-Answers
 
 #### 1) What is the difference between `null` & `undefined`?
 
@@ -93,7 +95,7 @@ console.log(a); // undefined
 let b = null;
 console.log(b); // null
 ```
-
+---
 
 #### 2) What is the use of the `map()` function in JavaScript? How is it different from `forEach()`?
 
@@ -124,6 +126,7 @@ console.log(doubled); // [2, 4, 6]
 numbers.forEach(num => console.log(num));
 // Logs: 1 2 3
 ```
+---
 
 #### 3) What is the difference between `==` & `===`?
 
@@ -142,6 +145,8 @@ numbers.forEach(num => console.log(num));
 
 > Always prefer `===` in modern JavaScript to avoid unexpected type coercion.
 
+---
+
 #### 4) What is the significance of `async`/`await` in fetching API data?
 
 - `async` is used before a function to make it asynchronous.
@@ -159,6 +164,8 @@ async function fetchData() {
 ```
 
 > `await` ensures the code waits for the data before moving to the next line.
+
+---
 
 #### 5) Explain the concept of Scope in JavaScript (Global, Function, Block).
 
