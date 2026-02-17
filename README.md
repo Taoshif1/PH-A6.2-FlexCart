@@ -1,7 +1,7 @@
 # 🛒 FlexCart – Modern E-Commerce Web App
 
-**Live Site:** [FlexCart](https://taoshif1.github.io/PH-A6.2-FlexCart/)
-**API Used:** [Fake Store API](https://fakestoreapi.com)
+- **Live Site:** [FlexCart](https://taoshif1.github.io/PH-A6.2-FlexCart/) 
+- **API Used:** [Fake Store API](https://fakestoreapi.com)
 ---
 
 ## 🚀 Project Overview
