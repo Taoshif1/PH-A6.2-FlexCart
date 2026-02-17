@@ -90,7 +90,7 @@
       </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features/Why Choose FlexCart Section -->
     <section
       class="py-24 relative overflow-hidden bg-gradient-to-br from-slate-50 via-indigo-50 to-pink-50"
     >
@@ -127,6 +127,7 @@
           </p>
         </div>
 
+        <!-- cards -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Card 1 -->
           <div
@@ -219,6 +220,41 @@
       </div>
     </section>
 
+    <!-- Products Section -->
+    <section class="py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Section Title -->
+        <div class="text-center mb-12">
+          <h2 class="text-5xl font-black text-slate-900">Explore <span class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-sm">Trending</span> Products</h2>
+        </div>
+
+        <!-- Categories -->
+        <div
+          id="categoryContainer"
+          class="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          <!-- Dynamic category buttons -->
+
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="hidden flex justify-center items-center py-10">
+          <div
+            class="w-12 h-12 border-4 border-indigo-500 border-dashed rounded-full animate-spin"
+          ></div>
+        </div>
+
+        <!-- Products Grid -->
+        <div
+          id="productContainer"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          <!-- Dynamic product cards -->
+
+        </div>
+      </div>
+    </section>
+
     <!-- Newsletter Section -->
     <section class="py-20 bg-white">
       <div class="max-w-6xl mx-auto px-4">
@@ -238,11 +274,11 @@
               <h2
                 class="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight"
               >
-                Join the <span class="text-indigo-400">Flex</span> Squad
+                Join the <br> <span class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-sm ">Flex Squad</span>
               </h2>
               <p class="text-indigo-100 text-lg">
-                Subscribe to get early access to new drops and exclusive
-                member-only discounts.
+                Subscribe to get early access to new drops & exclusive
+                member only discounts.
               </p>
             </div>
 
@@ -282,30 +318,6 @@
             limits with the world's most trusted marketplace.
           </p>
           <div class="flex space-x-4">
-            <!-- Facebook -->
-            <a
-              href="#"
-              class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors"
-              aria-label="Facebook"
-            >
-              <svg
-                xmlns="http://www.w3.org"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-facebook"
-              >
-                <path
-                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                />
-              </svg>
-            </a>
-
             <!-- Instagram -->
             <a
               href="#"
@@ -327,6 +339,30 @@
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="#"
+              class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors"
+              aria-label="Facebook"
+            >
+              <svg
+                xmlns="http://www.w3.org"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
               </svg>
             </a>
 
@@ -422,5 +458,8 @@
         </p>
       </div>
     </footer>
+
+    <!-- js script -->
+    <script src="index.js"></script>
   </body>
 </html>
