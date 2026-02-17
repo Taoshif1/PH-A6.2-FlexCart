@@ -1,8 +1,50 @@
 // alert("Welcome to FlexCart!")
 
+let cart = [];
+
 const productContainer = document.getElementById("productContainer");
 const categoryContainer = document.getElementById("categoryContainer");
 const loader = document.getElementById("loader");
+const cartCount = document.getElementById("cartCount");
+
+// challenge parts
+// cart count
+const updateCartCount = () => {
+  cartCount.textContent = cart.length;
+};
+
+// add to cart
+const addToCart = (product) => {
+  alert(`Added ${product.title} to cart!`);
+  cart.push(product);
+  updateCartCount();
+  saveCartToLocalStorage();
+};
+
+// remove from cart
+const removeFromCart = (id) => {
+  alert(`${product.title} removed from cart!`);
+  cart = cart.filter((item) => item.id !== id);
+  updateCartCount();
+  saveCartToLocalStorage();
+};
+
+// cart total calculation
+const calculateTotal = () => {
+  return cart.reduce((total, item) => total + item.price, 0);
+};
+
+// save & load from local storage
+const saveCartToLocalStorage = () => {
+  localStorage.setItem("flexCart", JSON.stringify(cart));
+};
+const loadCartFromLocalStorage = () => {
+  const stored = localStorage.getItem("flexCart");
+  if (stored) {
+    cart = JSON.parse(stored);
+    updateCartCount();
+  }
+};
 
 // show loader
 const showLoader = () => loader.classList.remove("hidden");
@@ -83,10 +125,11 @@ const displayProducts = (products) => {
   products.forEach((product) => {
     const productCard = document.createElement("div");
     productCard.className = "bg-white rounded-2xl shadow-md p-4 flex flex-col";
+
     productCard.innerHTML = `
-            <img src="${product.image}" 
-           alt="${product.title}" 
-           class="h-40 object-contain mb-4" />
+      <img src="${product.image}" 
+        alt="${product.title}" 
+        class="h-40 object-contain mb-4" />
 
       <h3 class="font-semibold text-lg mb-2">
         ${product.title.slice(0, 40)}...
@@ -103,14 +146,21 @@ const displayProducts = (products) => {
       </p>
 
       <div class="mt-auto flex gap-3">
-        <button class="flex-1 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">
+        <button class="details-btn flex-1 bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">
           Details
         </button>
-        <button class="flex-1 bg-slate-900 text-white py-2 rounded-lg hover:bg-slate-800">
+        <button class="add-btn flex-1 bg-slate-900 text-white py-2 rounded-lg hover:bg-slate-800">
           Add
         </button>
       </div>
     `;
+
+    // Attach events safely
+    const addBtn = productCard.querySelector(".add-btn");
+    addBtn.addEventListener("click", () => {
+      addToCart(product);
+    });
+
     productContainer.appendChild(productCard);
   });
 };
@@ -118,3 +168,4 @@ const displayProducts = (products) => {
 // Initialize
 fetchAllCategories();
 fetchAllProducts();
+loadCartFromLocalStorage();
